@@ -4,10 +4,11 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Profile } from '../../models/models';
 import { UserService } from '../user-service/user-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-profile-component',
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [RouterModule,CommonModule,FormsModule,HttpClientModule],
   templateUrl: './profile-component.html',
   styleUrl: './profile-component.css'
 })
