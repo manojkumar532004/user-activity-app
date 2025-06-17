@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { Activity, User } from '../../models/models';
 import { ActivityService } from '../activity-service/activity-service';
 import { UserService } from '../../user/user-service/user-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-activity-component',
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [RouterModule,CommonModule,FormsModule,HttpClientModule],
   templateUrl: './activity-component.html',
   styleUrl: './activity-component.css'
 })
