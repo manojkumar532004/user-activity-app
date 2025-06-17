@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../../models/models';
 import { Router } from '@angular/router';
 import { UserService } from '../user-service/user-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [RouterModule,CommonModule,FormsModule,HttpClientModule],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css'
 })
