@@ -4,10 +4,11 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Goal } from '../../models/models';
 import { ActivityService } from '../activity-service/activity-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-goal-component',
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [RouterModule,CommonModule,FormsModule,HttpClientModule],
   templateUrl: './goal-component.html',
   styleUrl: './goal-component.css'
 })
