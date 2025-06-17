@@ -1,0 +1,17 @@
+<div align="center">
+    <h2>Search User By ID</h2>
+    <input [(ngModel)]="searchId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="getUser()">Search User</button>
+
+    <div *ngIf="userById">
+        <p><strong>ID : </strong>{{userById.id}}</p>
+        <p><strong>User Name : </strong>{{userById.userName}}</p>
+        <p><strong>Email : </strong>{{userById.email}}</p>
+    </div>
+    <hr>
+    <h2>Remvoe User By ID</h2>
+    <input [(ngModel)]="removeId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="removeUser()">Remove User</button>
+    <hr>
+    <button><a href="/dashboard" style="text-decoration: none;">Back to Dashboard</a></button>
+</div>

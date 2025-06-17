@@ -1,0 +1,54 @@
+<div align="center">
+
+    <form (ngSubmit)="addActivity()">
+        <h2>Activity Form</h2>
+        <table>
+            <tr>
+                <td><label>Steps : </label></td>
+                <td><input [(ngModel)]="newActivity.steps" name="steps" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>Distance : </label></td>
+                <td><input [(ngModel)]="newActivity.distance" name="distance" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>Calories Burned : </label></td>
+                <td><input [(ngModel)]="newActivity.caloriesBurned" name="caloriesBurned" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>User ID : </label></td>
+                <td><input [(ngModel)]="newActivity.userId" name="userId" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>Date : </label></td>
+                <td><input [(ngModel)]="newActivity.date" name="date" type="date"></td>
+            </tr>
+        </table>
+        <button type="submit">Add Activity</button>
+    </form>
+    <hr>
+    <h2>Get All Activities By UserID</h2>
+    <input [(ngModel)]="userId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="getAllActivities()">Search</button>
+    <hr>
+    <div>
+        <table name="activitiesTable" border="1">
+            <thead>
+                <th>ID</th>
+                <th>Steps</th>
+                <th>Calories Burned</th>
+                <th>User ID</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let activity of activities">
+                    <td>{{activity.id}}</td>
+                    <td>{{activity.steps}}</td>
+                    <td>{{activity.caloriesBurned}}</td>
+                    <td>{{activity.userId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <button><a href="/dashboard" style="text-decoration: none;">Back to Dashboard</a></button>
+</div>

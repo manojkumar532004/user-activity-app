@@ -1,0 +1,39 @@
+<div align="center">
+    <h2>Search Profile By UserID</h2>
+    <input [(ngModel)]="userId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="getProfile()">Search Profile</button>
+
+    <div *ngIf="profileById">
+        <p><strong>ID : </strong>{{profileById.id}}</p>
+        <p><strong>Age : </strong>{{profileById.age}}</p>
+        <p><strong>Height : </strong>{{profileById.height}}</p>
+        <p><strong>Weight : </strong>{{profileById.weight}}</p>
+    </div>
+    <hr>
+    <h2>Search And Update Profile By UserID</h2>
+    <input [(ngModel)]="updatedUserId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="populateUpdateForm()">Search User</button>
+
+    <div *ngIf="showForm">
+        <form (ngSubmit)="updateProfile()">
+            <h2>Update Form</h2>
+            <table>
+                <tr>
+                    <td><label>Age : </label></td>
+                    <td><input [(ngModel)]="updatedProfile.age" name="age" type="number"></td>
+                </tr>
+                <tr>
+                    <td><label>Height : </label></td>
+                    <td><input [(ngModel)]="updatedProfile.height" name="height" type="number"></td>
+                </tr>
+                <tr>
+                    <td><label>Weight : </label></td>
+                    <td><input [(ngModel)]="updatedProfile.weight" name="weight" type="number"></td>
+                </tr>
+            </table>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    <hr>
+    <button><a href="/dashboard" style="text-decoration: none;">Back to Dashboard</a></button>
+</div>

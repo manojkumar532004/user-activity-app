@@ -1,0 +1,44 @@
+<div align="center">
+    
+    <form (ngSubmit)="addGoal()">
+        <h2>Add Goal For A User</h2>
+        <table>
+            <tr>
+                <td><label>User ID : </label></td>
+                <td><input [(ngModel)]="userId" name="userId" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>Target Steps : </label></td>
+                <td><input [(ngModel)]="newGoal.targetSteps" name="targetSteps" type="number"></td>
+            </tr>
+            <tr>
+                <td><label>Target Calories : </label></td>
+                <td><input [(ngModel)]="newGoal.targetCalories" name="targetCalories" type="number"></td>
+            </tr>
+        </table>
+        <button type="submit">Add Goal</button>
+    </form>
+    <hr>
+    <h2>Get All Goals By UserID</h2>
+    <input [(ngModel)]="searchId" type="number" placeholder="Enter ID">&nbsp;
+    <button (click)="getAllGoals()">Search</button>
+    <hr>
+    <div>
+        <table name="goalsTable" border="1">
+            <thead>
+                <th>ID</th>
+                <th>Target Steps</th>
+                <th>Target Calories</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let goal of goals">
+                    <td>{{goal.id}}</td>
+                    <td>{{goal.targetSteps}}</td>
+                    <td>{{goal.targetCalories}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <button><a href="/dashboard" style="text-decoration: none;">Back to Dashboard</a></button>
+</div>

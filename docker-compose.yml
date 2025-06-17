@@ -1,0 +1,5 @@
+services:
+  frontend:
+    build: ./user-activity-app
+    ports:
+      - "80:80"
