@@ -13,5 +13,5 @@
     <input [(ngModel)]="removeId" type="number" placeholder="Enter ID">&nbsp;
     <button (click)="removeUser()">Remove User</button>
     <hr>
-    <button><a href="/dashboard" style="text-decoration: none;">Back to Dashboard</a></button>
+    <button><a [routerLink]="'/dashboard'" style="text-decoration: none;">Back to Dashboard</a></button>
 </div>
