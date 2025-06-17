@@ -4,10 +4,11 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../user-service/user-service';
 import { User } from '../../models/models';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-component',
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [RouterModule,CommonModule,FormsModule,HttpClientModule],
   templateUrl: './user-component.html',
   styleUrl: './user-component.css'
 })
